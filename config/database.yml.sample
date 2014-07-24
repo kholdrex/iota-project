@@ -1,0 +1,17 @@
+local: &local
+  adapter: postgresql
+  username: postgres
+  password:
+  host: localhost
+
+development:
+  <<: *local
+  database: iota_project_dev
+
+test:
+  <<: *local
+  database: iota_project_test
+
+production:
+  <<: *local
+  database: iota_project_production
