@@ -4,7 +4,8 @@ rvm:
 env:
   - DB=postgresql
 script:
-  - RAILS_ENV=test bundle exec rake --trace db:migrate test
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake
 before_script:
   - cp config/database.yml.sample config/database.yml
   - psql -c 'create database iota_project_test' -U postgres
@@ -12,3 +13,4 @@ deploy:
   provider: heroku
   api_key: 5f124ede-0ad0-4b74-958e-9057685aa737
   app: iota-project
+  run: "rake db:migrate"
