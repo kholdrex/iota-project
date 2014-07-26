@@ -7,6 +7,7 @@ Iota task scheduler is a convenient tool for managing your personal tasks. Its f
 - assign labels/categories to your tasks
 - specify tasks dependencies
 - manage status of the tasks
+- collaborate with others by sharing access to your boards
 
 Keep track of everything with Iota!
 
