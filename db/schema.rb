@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 20140727102241) do
     t.integer "user_id"
   end
 
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "board_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["board_id"], name: "index_categories_on_board_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "login"
