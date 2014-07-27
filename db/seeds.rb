@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+5.times do |i|
+  User.create( name: Faker::Name.name, login: Faker::Internet.user_name,
+          email: Faker::Internet.email, password: Faker::Internet.password )
+
+  Board.create( name: Faker::Lorem.word, description: Faker::Lorem.sentence, 
+                priority: Faker::Number.digit )
+end
