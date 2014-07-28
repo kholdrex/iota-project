@@ -6,5 +6,6 @@ FactoryGirl.define do
   	login    { Faker::Internet.user_name } 
   	email    { Faker::Internet.email }
   	password { Faker::Internet.password }
+  	# boards { |a| [a.association(:board)] }
   end
 end
