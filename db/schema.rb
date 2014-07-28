@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727102241) do
+ActiveRecord::Schema.define(version: 20140728081653) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,46 @@ ActiveRecord::Schema.define(version: 20140727102241) do
     t.integer "board_id"
     t.integer "user_id"
   end
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "board_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["board_id"], name: "index_categories_on_board_id", using: :btree
+
+  create_table "labels", force: true do |t|
+    t.string   "name"
+    t.string   "color"
+    t.integer  "board_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "labels", ["board_id"], name: "index_labels_on_board_id", using: :btree
+
+  create_table "labels_tasks", id: false, force: true do |t|
+    t.integer "label_id"
+    t.integer "task_id"
+  end
+
+  create_table "tasks", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "due"
+    t.integer  "parents_ids", array: true
+    t.integer  "state"
+    t.integer  "assignees",   array: true
+    t.integer  "priority"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks", ["category_id"], name: "index_tasks_on_category_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"

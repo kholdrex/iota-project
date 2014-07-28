@@ -5,5 +5,6 @@ FactoryGirl.define do
   	name 		{ Faker::Lorem.word }
   	description { Faker::Lorem.sentence }
   	priority    { Faker::Number.digit }
+  	# users { |a| [a.association(:user)] }
   end
 end
