@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97371274-ef1a-4a4c-b4b4-d511936f119d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/database.yml.example" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/database.yml.example" afterPath="$PROJECT_DIR$/config/database.yml.sample" />
     </list>
     <ignored path="iota-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -741,7 +741,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml.example">
+    <entry file="file://$PROJECT_DIR$/config/database.yml.sample">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15606937" vertical-offset="0" max-vertical-offset="396">
           <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
