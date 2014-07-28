@@ -10,6 +10,6 @@ FactoryGirl.define do
     assignees { [Faker::Number.digit, Faker::Number.digit, Faker::Number.digit] }
     priority { Faker::Number.digit }
     association :category
-    # labels { |a| [a.association(:label)] }
+    #labels { |a| [a.association(:label)] }
   end
 end

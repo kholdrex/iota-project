@@ -7,5 +7,5 @@ RSpec.describe User, :type => :model do
   end
 
   it { is_expected.to have_and_belong_to_many(:boards) }
-
+  it { is_expected.to have_many(:comments) }
 end

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2367065104">
+    <data-source source="LOCAL" name="Rails iota-project: development" uuid="7da826b9-f20c-4e70-9de5-c979ee3b52f7">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/iota_project_dev</jdbc-url>
+      <user-name>alex</user-name>
+      <user-password>df98df9ddf9adf93df93df99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails iota-project: test" uuid="94ab8136-7753-498f-a1b0-c120fc3188ed">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/iota_project_test</jdbc-url>
+      <user-name>alex</user-name>
+      <user-password>df98df9ddf9adf93df93df99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails iota-project: production" uuid="78e2e8f2-6081-4670-83c2-9c93a681f25c">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/iota_project_production</jdbc-url>
+      <user-name>alex</user-name>
+      <user-password>df98df9ddf9adf93df93df99</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

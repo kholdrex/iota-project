@@ -7,8 +7,8 @@ RSpec.describe Task, :type => :model do
   end
 
   it { is_expected.to have_and_belong_to_many(:labels) }
-  # it { is_expected.to have_many(:attachments) }
-  # it { is_expected.to have_many(:checklists) }
-  # it { is_expected.to have_many(:comments) }
+  it { is_expected.to have_many(:attachments) }
+  it { is_expected.to have_many(:checklists) }
+  it { is_expected.to have_many(:comments) }
   
 end

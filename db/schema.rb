@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140728081653) do
+ActiveRecord::Schema.define(version: 20140728112422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attachments", force: true do |t|
+    t.string   "content"
+    t.integer  "task_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "boards", force: true do |t|
     t.string   "name"
@@ -39,6 +46,24 @@ ActiveRecord::Schema.define(version: 20140728081653) do
   end
 
   add_index "categories", ["board_id"], name: "index_categories_on_board_id", using: :btree
+
+  create_table "checklists", force: true do |t|
+    t.string   "name"
+    t.boolean  "completed"
+    t.integer  "task_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", force: true do |t|
+    t.text     "text"
+    t.integer  "rank"
+    t.integer  "task_id"
+    t.integer  "user_id"
+    t.integer  "users_voted", array: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "labels", force: true do |t|
     t.string   "name"
